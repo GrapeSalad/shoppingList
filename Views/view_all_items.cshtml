@@ -1,4 +1,12 @@
 <h1>Shopping List</h1>
 <ul>
-  <li>@Model.GetDescription()</li>
+  @foreach(string item in Model)
+  {
+    <li>@item</li>
+  }
 </ul>
+<p><a href="/">Add another item</a></p>
+
+<form action="/items_cleared" method="post">
+  <button type="submit" name="button">Clear All Tasks</button>
+</form>

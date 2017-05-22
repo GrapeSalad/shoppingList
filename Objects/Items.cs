@@ -26,5 +26,9 @@ namespace ShoppingList.Objects
     {
       _instances.Add(_description);
     }
+    public static void ClearAll()
+    {
+      _instances.Clear();
+    }
   }
 }
